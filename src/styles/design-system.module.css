@@ -1,0 +1,19 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.homepage-title {
+  font-size: 5em;
+  text-align: center;
+  margin: 10rem 0 1rem 0;
+}
+
+.menu-item {
+  font-size: 2em;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
