@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-
-import styles from "@styles/design-system.module.css";
+import {
+  HOMEPAGE_MENU_ITEM_CLASSNAMES,
+  HOMEPAGE_NAVE_CLASSNAMES,
+  HOMEPAGE_TITLE_CLASSNAMES,
+} from "@pages/index.classnames";
 
 export default function Home() {
   return (
@@ -16,11 +19,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={styles["homepage-title"]}>CURE OF THE LOST</h1>
-        <nav>
+        <h1 className={HOMEPAGE_TITLE_CLASSNAMES}>CURE OF THE LOST</h1>
+        <nav className={HOMEPAGE_NAVE_CLASSNAMES}>
           <ul>
             <li>
-              <Link className={styles["menu-item"]} href="/cartography">
+              <Link
+                className={HOMEPAGE_MENU_ITEM_CLASSNAMES}
+                href="/cartography"
+              >
                 Get started!
               </Link>
             </li>
