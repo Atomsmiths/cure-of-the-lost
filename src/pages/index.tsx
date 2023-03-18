@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import {
   HOMEPAGE_MENU_ITEM_CLASSNAMES,
-  HOMEPAGE_NAVE_CLASSNAMES,
+  HOMEPAGE_NAV_CLASSNAMES,
   HOMEPAGE_TITLE_CLASSNAMES,
 } from "@pages/index.classnames";
 
@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main>
         <h1 className={HOMEPAGE_TITLE_CLASSNAMES}>CURE OF THE LOST</h1>
-        <nav className={HOMEPAGE_NAVE_CLASSNAMES}>
+        <nav className={HOMEPAGE_NAV_CLASSNAMES}>
           <ul>
             <li>
               <Link

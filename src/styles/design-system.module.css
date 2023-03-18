@@ -16,3 +16,11 @@
   font-size: 2rem;
   margin: 0 0 1rem 0;
 }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
