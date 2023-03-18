@@ -1,1 +1,30 @@
 @import "~normalize.css/normalize.css";
+
+@font-face {
+  font-family: "IsaacGame";
+  src: url("../../public/fonts/IsaacGame.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "upheavtt";
+  src: url("../../public/fonts/upheavtt.ttf") format("truetype");
+}
+
+:root {
+  background-color: #000;
+  color: #fff;
+  font-family: "upheavtt";
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:visited {
+    color: #fff;
+  }
+}
+
+li {
+  list-style: none;
+}
