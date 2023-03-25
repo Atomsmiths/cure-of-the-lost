@@ -1,10 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import {
-  HOMEPAGE_MENU_ITEM_CLASSNAMES,
-  HOMEPAGE_NAV_CLASSNAMES,
-  HOMEPAGE_TITLE_CLASSNAMES,
-} from "@pages/index.classnames";
 
 export default function Home() {
   return (
@@ -19,14 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className={HOMEPAGE_TITLE_CLASSNAMES}>CURE OF THE LOST</h1>
-        <nav className={HOMEPAGE_NAV_CLASSNAMES}>
+        <h1 className="homepage-title">CURE OF THE LOST</h1>
+        <nav className={"nav"}>
           <ul>
             <li>
-              <Link
-                className={HOMEPAGE_MENU_ITEM_CLASSNAMES}
-                href="/cartography"
-              >
+              <Link className={"menu-item"} href="/cartography">
                 Get started!
               </Link>
             </li>

@@ -1,48 +1,38 @@
-import { MAP_GRID, MAP_GRID_ITEM, MAP_EMPTY } from "@pages/index.classnames";
 import { useMatrix } from "../hooks/useMatrix";
-import {
-  CARTOGRAPHY_MAIN_CLASSNAMES,
-  CARTOGRAPHY_RESET_BTN_CLASSNAMES,
-  CARTOGRAPHY_TITLE_CLASSNAMES,
-  CARTOGRAPHY_CONTAINER,
-  CARTOGRAPHY_MENU,
-} from "./index.classnames";
 
 const Cartography = () => {
   const { matrix, updateMatrix, resetMatrix } = useMatrix();
 
   function getCellClassnames(cell: string | null) {
     if (cell === "clicked") {
-      return MAP_EMPTY;
+      return "empty";
     }
 
-    return MAP_GRID_ITEM;
+    return "grid-item";
   }
 
   return (
-    <main className={CARTOGRAPHY_MAIN_CLASSNAMES}>
-      <div className={CARTOGRAPHY_CONTAINER}>
-        <h1 className={CARTOGRAPHY_TITLE_CLASSNAMES}>Cartography</h1>
-        <div className={MAP_GRID}>
-          {matrix.map((row, rowIndex) => {
-            return row.map((cell, colIndex) => {
-              return (
-                <div
-                  key={`${rowIndex}-${colIndex}`}
-                  onClick={() => updateMatrix(rowIndex, colIndex)}
-                  className={getCellClassnames(cell)}
-                />
-              );
-            });
-          })}
+    <main className={"cartography-main"}>
+      <div className={"cartography-container"}>
+        <h1 className={"cartography-title"}>Cartography</h1>
+        <div className="cartography-grid-container">
+          <div className={"grid"}>
+            {matrix.map((row, rowIndex) => {
+              return row.map((cell, colIndex) => {
+                return (
+                  <div
+                    key={`${rowIndex}-${colIndex}`}
+                    onClick={() => updateMatrix(rowIndex, colIndex)}
+                    className={getCellClassnames(cell)}
+                  />
+                );
+              });
+            })}
+          </div>
         </div>
       </div>
-      <div className={CARTOGRAPHY_MENU}>
-        {" "}
-        <button
-          onClick={resetMatrix}
-          className={CARTOGRAPHY_RESET_BTN_CLASSNAMES}
-        >
+      <div className={"cartography-menu"}>
+        <button onClick={resetMatrix} className="cartography-reset-btn">
           RESET
         </button>
       </div>

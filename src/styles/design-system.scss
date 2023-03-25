@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -26,8 +28,7 @@
 }
 
 .grid {
-  background-color: #050402;
-  /* margin: auto; */
+  background-color: #1b1b1b;
   display: grid;
   width: fit-content;
   grid-template-columns: repeat(13, 4rem);
@@ -35,10 +36,20 @@
   gap: 5px;
 }
 
+.cartography-grid-container {
+  overflow: scroll;
+  padding: 1.5rem;
+  border-radius: 40px;
+  background-color: #1b1b1b;
+  box-shadow: 20px 20px 60px #131313, -20px -20px 60px #232323;
+}
+
 .grid-item {
   width: 100%;
   height: 100%;
   background-color: #111111;
+  box-shadow: 2px 2px 3px #0c0c0c, -2px -2px 3px #161616;
+  border-radius: 2px;
 }
 
 .shop {
@@ -52,12 +63,12 @@
 }
 
 .cartography-title {
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
-  /* margin: 0 0 2rem 0; */
 }
 
 .cartography-main {
+  position: relative;
   display: flex;
   height: 100%;
 }
@@ -67,21 +78,45 @@
 }
 
 .cartography-container {
+  min-width: fit-content;
+  // width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-evenly;
+  padding: 0 1rem 1rem;
+  // flex-grow: 1;
+
+  @media screen and (min-width: $xl-breakpoint) {
+    padding: 0 1.5rem 1rem;
+    width: 70%;
+  }
+
+  @media screen and (min-width: $xxl-breakpoint) {
+    // width: max-content;
+  }
 }
 
 .cartography-menu {
-  height: 100vh;
+  height: 96%;
   position: fixed;
-  top: 0;
+  top: 2%;
   right: 0;
-  width: calc(100% - (13 * 4rem) - 2rem - 12 * 5px - 3.5rem);
-  background-color: #111111;
+  /* calc(100% - (nbCol * widthCol) - containerPadding - gridPadding - (nbCol-1 * gridGap)) */
+  // max-width: calc(100% - (13 * 4rem) - 3rem - 3.5rem - (12 * 5px));
+  width: auto;
+  // min-width: 30%;
+  background-color: #1b1b1b;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  padding: 2rem;
+  box-shadow: 20px 20px 60px #131313, -20px -20px 60px #232323;
+
+  @media screen and (min-width: $xl-breakpoint) {
+    width: 25%;
+  }
+
+  @media screen and (min-width: $xxl-breakpoint) {
+  }
 }

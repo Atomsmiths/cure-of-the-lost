@@ -8,14 +8,16 @@
   src: url("../../public/fonts/upheavtt.ttf") format("truetype");
 }
 
-html {
+:root {
+  background-color: #1b1b1b;
+  color: #fff;
+  font-family: "upheavtt";
   height: 100%;
 }
 
-:root {
-  background-color: #000;
-  color: #fff;
-  font-family: "upheavtt";
+body,
+#__next {
+  height: 100%;
 }
 
 a {
